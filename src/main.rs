@@ -2,10 +2,7 @@
 #[macro_use] extern crate rocket;
 #[macro_use] extern crate json;
 
-/**
- * The current API version.
- */
-const API_VERSION: &str = "1.0.0";
+mod vars;
 
 /**
  * The root rout
@@ -13,7 +10,7 @@ const API_VERSION: &str = "1.0.0";
 #[get("/")]
 fn root() -> String {
     return object!{
-        version: API_VERSION
+        version: vars::API_VERSION
     }.dump();
 }
 
