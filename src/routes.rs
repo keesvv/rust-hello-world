@@ -1,7 +1,7 @@
 use crate::vars;
 
 /**
- * The root rout
+ * The root route.
  */
 #[get("/")]
 pub fn root() -> String {
